@@ -1,0 +1,13 @@
+---
+title: "ReadMe"
+author: "Bruce Walthers"
+date: "Tuesday, December 23, 2014"
+output: html_document
+---
+
+
+
+## Add code showing how I downloaded the data
+## Add code showing grader how to read run_analysis.R back in
+
+

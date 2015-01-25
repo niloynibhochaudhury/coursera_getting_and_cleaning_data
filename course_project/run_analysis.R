@@ -8,6 +8,11 @@ setwd("~/.FY14 Priorities/03_Training/Data Science/Coursera Data Science/courser
 library(tidyr)
 library(dplyr)
 
+## Download data file from web
+temp <- tempfile() ## create temp file
+download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip",temp) ## download zip file
+unzip(temp) ## unzip file
+rm(temp) ## remove temp file
 
 ## Pre-work ## Read in the data for each item
 activity_labels<-read.table("./UCI HAR Dataset/activity_labels.txt")
@@ -80,6 +85,6 @@ rm(table_merged_data) ## free up memory by removing data that is no longer neede
 write.table(final_df, file="tidy_data.txt", row.names=FALSE) ## Write final tidy data (final_df) to a text file
 
 
-## Code to read Tidy Data back in.  Assumes you have saved tidy_data.txt to you 
+## Code to read Tidy Data back in.  Assumes you have saved tidy_data.txt to your working directory 
 ## tidy_data<-read.table("tidy_data.txt", header=TRUE)
 

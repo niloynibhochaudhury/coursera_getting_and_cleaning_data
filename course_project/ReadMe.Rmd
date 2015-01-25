@@ -1,13 +1,29 @@
 ---
 title: "ReadMe"
 author: "Bruce Walthers"
-date: "Tuesday, December 23, 2014"
+date: "January 24th, 2015"
 output: html_document
 ---
 
+Data Download
+=============
+I use the following code to down the datasets
 
 
-## Add code showing how I downloaded the data
-## Add code showing grader how to read run_analysis.R back in
+```{r,
+## Download data file from web
+temp <- tempfile() ## create temp file
+download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip",temp) ## download zip file
+unzip(temp) ## unzip file
+rm(temp) ## remove temp file}
 
+```
+
+Scripts used
+============
+I used the following (2) scripts:
+
+1. I used "run_analysis.R" to load the data into tables, clean it, and generate the final tidy data set
+
+2. I wrote "read_tidy_data.R" for the coursera graders to use the read my tidy set back in
 

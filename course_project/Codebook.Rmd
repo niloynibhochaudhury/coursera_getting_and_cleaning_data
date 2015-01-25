@@ -1,13 +1,12 @@
 ---
 title: "Codebook"
 author: "Bruce Walthers"
-date: "Tuesday, December 23, 2014"
+date: "January 24th, 2015"
 output: html_document
 ---
 
 
 Experimental design and background:
-
 
 Raw Data:
         Data comes in 8 files
@@ -18,27 +17,109 @@ Raw Data:
 
 
 Processed Data:
-        Discuss transformations to data
-        Talk about coverting data to factors etc
+        I did the following conversions on the data
+        1. I merged training and the testing files together.
+        2. Subsetted the variables to only include the ones with mean or standard deviation
+        3. I renamed the activities to make them more descriptive
+        4. I cleaned up the variable names and made them valid in some cases
+        5. I created the final tidy dataset
         
 
-
-
-
-
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r}
-summary(cars)
-```
-
-You can also embed plots, for example:
-
-```{r, echo=FALSE}
-plot(cars)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Variables
+        I did the following to the variables
+        1. I created 2 new variables "Subject" and "activity"
+        2. I removed variables that did not have "mean" or "std" in them
+        3. I made the variable names syntactically valid
+        
+List of variables
+        Subject - Integer between 1 and 30 representing the subjects in the data
+        Activity - One of six activities performed by the subjects including 
+        
+        Below variables are all the mean of the means or standard deviations of the raw accelerometer data
+        
+        time.BodyAcc.mean.X
+        time.BodyAcc.mean.Y
+        time.BodyAcc.mean.Z
+        time.BodyAcc.std.X
+        time.BodyAcc.std.Y
+        time.BodyAcc.std.Z
+        time.GravityAcc.mean.X
+        time.GravityAcc.mean.Y
+        time.GravityAcc.mean.Z
+        time.GravityAcc.std.X
+        time.GravityAcc.std.Y
+        time.GravityAcc.std.Z
+        time.BodyAccJerk.mean.X
+        time.BodyAccJerk.mean.Y
+        time.BodyAccJerk.mean.Z
+        time.BodyAccJerk.std.X
+        time.BodyAccJerk.std.Y
+        time.BodyAccJerk.std.Z
+        time.BodyGyro.mean.X
+        time.BodyGyro.mean.Y
+        time.BodyGyro.mean.Z
+        time.BodyGyro.std.X
+        time.BodyGyro.std.Y
+        time.BodyGyro.std.Z
+        time.BodyGyroJerk.mean.X
+        time.BodyGyroJerk.mean.Y
+        time.BodyGyroJerk.mean.Z
+        time.BodyGyroJerk.std.X
+        time.BodyGyroJerk.std.Y
+        time.BodyGyroJerk.std.Z
+        time.BodyAccMag.mean
+        time.BodyAccMag.std
+        time.GravityAccMag.mean
+        time.GravityAccMag.std
+        time.BodyAccJerkMag.mean
+        time.BodyAccJerkMag.std
+        time.BodyGyroMag.mean
+        time.BodyGyroMag.std
+        time.BodyGyroJerkMag.mean
+        time.BodyGyroJerkMag.std
+        freq.BodyAcc.mean.X
+        freq.BodyAcc.mean.Y
+        freq.BodyAcc.mean.Z
+        freq.BodyAcc.std.X
+        freq.BodyAcc.std.Y
+        freq.BodyAcc.std.Z
+        freq.BodyAcc.meanFreq.X
+        freq.BodyAcc.meanFreq.Y
+        freq.BodyAcc.meanFreq.Z
+        freq.BodyAccJerk.mean.X
+        freq.BodyAccJerk.mean.Y
+        freq.BodyAccJerk.mean.Z
+        freq.BodyAccJerk.std.X
+        freq.BodyAccJerk.std.Y
+        freq.BodyAccJerk.std.Z
+        freq.BodyAccJerk.meanFreq.X
+        freq.BodyAccJerk.meanFreq.Y
+        freq.BodyAccJerk.meanFreq.Z
+        freq.BodyGyro.mean.X
+        freq.BodyGyro.mean.Y
+        freq.BodyGyro.mean.Z
+        freq.BodyGyro.std.X
+        freq.BodyGyro.std.Y
+        freq.BodyGyro.std.Z
+        freq.BodyGyro.meanFreq.X
+        freq.BodyGyro.meanFreq.Y
+        freq.BodyGyro.meanFreq.Z
+        freq.BodyAccMag.mean
+        freq.BodyAccMag.std
+        freq.BodyAccMag.meanFreq
+        freq.BodyBodyAccJerkMag.mean
+        freq.BodyBodyAccJerkMag.std
+        freq.BodyBodyAccJerkMag.meanFreq
+        freq.BodyBodyGyroMag.mean
+        freq.BodyBodyGyroMag.std
+        freq.BodyBodyGyroMag.meanFreq
+        freq.BodyBodyGyroJerkMag.mean
+        freq.BodyBodyGyroJerkMag.std
+        freq.BodyBodyGyroJerkMag.meanFreq
+        angle.tBodyAccMean.gravity.
+        angle.tBodyAccJerkMean..gravityMean.
+        angle.tBodyGyroMean.gravityMean.
+        angle.tBodyGyroJerkMean.gravityMean.
+        angle.X.gravityMean.
+        angle.Y.gravityMean.
+        angle.Z.gravityMean.
